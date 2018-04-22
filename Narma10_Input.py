@@ -8,15 +8,7 @@ import h5py
 
 
 def NARMA10(N):
-    """
-    Description:    Build a NARMA10 Dataset
-    Usage:          builtNARMA10(N)
-    Input:
-        N       = number of values
-    Output:
-        u       = input values
-        y       = function values
-    """
+    """ Calculate an N-long Narma10 sequence """
 
     while True:
         # generate input
@@ -42,9 +34,7 @@ def NARMA10(N):
 def CreateSamples(_Filename, _NSamples):
 
     print("Creating Narma10 samples...")
-
     N10_Params = {}
-
     N10_Params['NSamples'] = _NSamples
     N10_Params['NElements'] = 800
     N10_Params['NThetas'] = 400
@@ -76,4 +66,3 @@ def CreateSamples(_Filename, _NSamples):
         ofile.create_dataset('Masked Inputs',data = Masked_Inputs)  
 
     return None       
-
