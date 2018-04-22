@@ -18,7 +18,7 @@ The standard form of the Mackey-Glass equation is:
 
 ![first eq](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\frac{dx}{dt}&space;=&space;\beta&space;\frac{x(t-\tau)}{1&plus;[x(t-\tau)]^p}-\gamma&space;x(t),\quad\text{with}\quad\gamma,\beta,p>0)
 
-This equation appears in [Appeltant](https://www.nature.com/articles/ncomms1476) with a different notation:
+This equation appears in [Appeltant et al. (2011)](https://www.nature.com/articles/ncomms1476) with a different notation:
 
 ![second eq](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\dot{X}(t)=&space;-X(t)&plus;\frac{\eta\cdot[X(t-\tau)&plus;\zeta&space;J(t)]}{1&plus;[X(t-\tau)&plus;\zeta&space;J(t)]^p})
 
