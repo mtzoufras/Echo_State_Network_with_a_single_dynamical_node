@@ -44,29 +44,6 @@ def TrainData(_N10_File, _Oscillator_File, _training, _testing):
     Xtest  = np.vstack( [ (Oscillator_Outputs[i,:]).reshape(N10['NElements'],N10['NThetas']) for i in _testing ])
     _Ytest = np.hstack([ rOutputs[i,:] for i in _testing ])
 
-#--------------
-    #lambdas = [#1e-15,1e-16,1e-17,
-    #            1e-18#,1e-19
-    #]
-    #thisC = [#0.1,0.01,
-    #    1e-3#,1e-4,1e-5
-    #]
-
-    #NRMSE_best = 1.0
-    #for ll in lambdas:
-    #    for CC in thisC:
-    #        Xtrain_a, _Ytrain_a = Augment_Sets(Xtrain,_Ytrain,CC,ll)
-    #        Xtest_a, _Ytest_a = Augment_Sets(Xtest,_Ytest,CC,ll)
-    #        weights = Normal_weights(Xtrain_a,_Ytrain_a)
-    #        _Ybar_test  = np.dot(Xtest_a,weights.T)
-    #        _Ybar_train = np.dot(Xtrain_a,weights.T)
-    #        NRMSE_test = NRMSE(_Ybar_test,_Ytest_a)
-    #        if NRMSE_test < NRMSE_best:
-    #            lll, CCC = ll, CC
-    #            NRMSE_best = NRMSE_test
-    #            print str(ll) + "   " + str(CC) + "   "+ str(NRMSE_test)
-#--------------
-
     lll = 1e-18
     CCC = 1e-3
 
