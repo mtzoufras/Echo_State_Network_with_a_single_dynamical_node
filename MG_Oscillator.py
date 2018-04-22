@@ -8,11 +8,10 @@ import h5py
 
 
 class Temporal_Profile_MG(object):
-    """Provides temporal profiles, works as a base class for current/voltage/polarizer profiles"""
         
     def __init__(self, _times, _values, _Simulation_Time, _h):
-        self.Values = []
         
+        self.Values = []
         time = 0.5*_h
         for i in range(1,len(_times)):
             while (time < _times[i]):
@@ -24,7 +23,6 @@ class Temporal_Profile_MG(object):
         self.Values.append(_values[:,-1])
 
     def __call__(self,_step):
-        """Returns the polarizer strength at the specified time-step"""
         return self.Values[_step]
 
 
@@ -37,7 +35,7 @@ class MackeyGlass(object):
         self.y = [0.00001 for i in range(0,_N+1)] # Here we choose 2.0 as the initial value
     
     def run(self,_SimulationTime):
-        """Run the simulation for a prescribed time. Return the output signal."""
+        """Run the simulation for a prescribed time without input."""
         Nmax = int(_SimulationTime/self.h)+len(self.y)
         Start = len(self.y)-1
         C1 = (1.0-0.5*self.gamma*self.h)
@@ -51,7 +49,7 @@ class MackeyGlass(object):
         return self.y[Start:]
     
     def run_driven(self,_SimulationTime,_zeta_J):
-        """Run the simulation for a prescribed time. Return the output signal."""
+        """Run the several copies of the simulation for the given drivers z*J(t)."""
         
         Nmax = int(_SimulationTime/self.h)+len(self.y)
         Start = len(self.y)-1
