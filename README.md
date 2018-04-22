@@ -16,19 +16,20 @@ where clearly we recover the previous expression for:
 
 ### Implicit midpoint method
 Using the [implicit midpoint method](https://en.wikipedia.org/wiki/Midpoint_method):
+
 ![implicit midpoint](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\Bigl(1&plus;\frac{h}{2}\Bigr)X_{n&plus;1}=&space;\Bigl(1-\frac{h}{2}\Bigr)X_n&space;&plus;\frac{\eta\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]}{1&plus;\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]^p})
 
-Where _h_ is the time-step. With Delay Differential Equations we need the values of _X_ at the present time _t_ as well as its delayed value at _t-&#964;_. To avoid having to interpolate the time-step _h_ is chosen:
+Where _h_ is the time-step. With Delay Differential Equations (DDEs) we need the values of _X_ at the present time _t_ as well as its delayed value at _t-&#964;_. To avoid having to interpolate we can choose the time-step _h_ as:
 
 ![timestep](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;h&space;=&space;\frac{2\tau}{2N&plus;1}\Rightarrow&space;t_n&plus;\frac{h}{2}-\tau&space;=&space;t_n-Nh)
 
-Where _N_ is an integer number, the number of steps used to resolve the Delay Period _&#964;_. Finally, the values of the external driver--the multiplexed input _&#950;J(t)_ for which there is an analytical expression--can be defined at _t<sub>n</sub>+h/2_.
+Where _N_ is an integer number: the number of steps used to resolve the Delay Period _&#964;_. Finally, the values of the external driver--the multiplexed input _&#950;J(t)_ for which there is an analytical expression--can be defined at _t<sub>n</sub>+h/2_.
 
 ## Mackey-Glass oscillator output
 
 ![fig1](https://github.com/mtzoufras/Reservoir_computing_with_a_single_dynamical_node/blob/master/Reservoir_Response.png?raw=true)
 
-## Training sample output
+## Training
 
 ![fig2](https://github.com/mtzoufras/Reservoir_computing_with_a_single_dynamical_node/blob/master/Train_Dataset.png?raw=true)
 
