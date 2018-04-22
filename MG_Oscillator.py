@@ -119,7 +119,3 @@ def Oscillator_Simulation(_Filename, _Filename1):
         ofile.create_dataset('Oscillator Outputs',data = MG_Output)
 
     return zeta*Masked_N10, Theta, Simulation, Simulation_Time
-
-
-
-
