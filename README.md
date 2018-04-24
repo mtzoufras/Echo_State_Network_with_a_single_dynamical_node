@@ -26,7 +26,7 @@ where clearly we recover the previous expression for:
 
 ![third_eq](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\gamma&space;=1,&space;\beta&space;=&space;\eta,\quad\text{and}&space;\quad&space;x(t-\tau)&space;\rightarrow&space;X(t-\tau)&plus;\zeta&space;J(t))
 
-The method used for integrating this equation is the [implicit midpoint method](https://en.wikipedia.org/wiki/Midpoint_method):
+For the numerical integration of this equation we use the [implicit midpoint method](https://en.wikipedia.org/wiki/Midpoint_method) as described below:
 
 ![implicit midpoint](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\Bigl(1&plus;\frac{h}{2}\Bigr)X_{n&plus;1}=&space;\Bigl(1-\frac{h}{2}\Bigr)X_n&space;&plus;\frac{\eta\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]}{1&plus;\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]^p})
 
