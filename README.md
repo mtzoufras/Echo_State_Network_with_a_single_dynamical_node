@@ -30,11 +30,11 @@ For the numerical integration of this equation we use the [implicit midpoint met
 
 ![implicit midpoint](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;\Bigl(1&plus;\frac{h}{2}\Bigr)X_{n&plus;1}=&space;\Bigl(1-\frac{h}{2}\Bigr)X_n&space;&plus;\frac{\eta\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]}{1&plus;\Bigl[X(t_n&plus;\frac{h}{2}-\tau)&plus;\zeta&space;J(t_n&plus;\frac{h}{2})\Bigr]^p})
 
-where _h_ is the timestep. To integrate a Delay Differential Equation (DDE) we need the values of _X_ at the present time _X(t)_ as well as its delayed value _X(t-&#964;)_. If _&#964;_ is an integral number _N_ of timesteps _h_, viz. if _&#964; = Nh_, then the value of _X(t-&#964;)_ has already been calculated and we can immediately substitute it in the equation above. Therefore we choose:
+where _h_ is the timestep. To integrate a Delay Differential Equation (DDE) we need the values of _X_ at the present time _X(t)_ as well as its delayed value _X(t-&#964;)_. For the implicit midpoint method we actually need _X(t<sub>n</sub>)_ and _X(t<sub>n</sub>+h/2-&#964;)_. Therefore, if _&#964;-h/2_ is an integral number _N_ of timesteps _h_, viz. if _&#964;-h/2 = Nh_, then the value of _X(t<sub>n</sub>+h/2-&#964;)_ has already been calculated and we can immediately substitute it in the equation above. We choose:
 
 ![timestep](https://latex.codecogs.com/gif.latex?\bg_white&space;\large&space;h&space;=&space;\frac{2\tau}{2N&plus;1}\Rightarrow&space;t_n&plus;\frac{h}{2}-\tau&space;=&space;t_n-Nh)
 
-_N_ represents the number of steps used to resolve the Delay Period _&#964;_.
+where _N_ represents the number of steps used to resolve the Delay Period _&#964;_.
 
 ### on the Mackey-Glass response
 
